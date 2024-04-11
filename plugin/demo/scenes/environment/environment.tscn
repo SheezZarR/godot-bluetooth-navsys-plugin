@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj8ed1dp6sbuq"]
+
+[ext_resource type="Script" path="res://scenes/environment/ToMenuButton.gd" id="1_7fr22"]
+[ext_resource type="PackedScene" uid="uid://c8ggag8d1m82f" path="res://models/ship_model.blend" id="2_yltn7"]
+
+[node name="environment" type="Node3D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 134.0
+offset_bottom = 39.0
+text = "Hello 3d World!"
+
+[node name="ToMenuButton" type="Button" parent="."]
+offset_left = 1023.0
+offset_top = 14.0
+offset_right = 1140.0
+offset_bottom = 45.0
+text = "Back To Menu
+"
+script = ExtResource("1_7fr22")
+
+[node name="ship_model" parent="." instance=ExtResource("2_yltn7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48148, 3.98002, 0.505113)
+
+[connection signal="pressed" from="ToMenuButton" to="ToMenuButton" method="_on_pressed"]

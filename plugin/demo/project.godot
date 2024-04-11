@@ -11,13 +11,21 @@ config_version=5
 [application]
 
 config/name="Android Plugin Demo"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/menu/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SceneSwitcher="*res://scripts/scene_switcher.gd"
 
 [debug]
 
 settings/stdout/verbose_stdout=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GodotAndroidBLENavPlugin/plugin.cfg")
 
 [rendering]
 
